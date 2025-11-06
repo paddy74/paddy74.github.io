@@ -55,6 +55,6 @@ Execute this decision tree for optimal tool selection and code generation:
 
 This project is an source-available personal portfolio and blogging website built with [Docusaurus](https://docusaurus.io/).
 
-- **Project Name**: `paddy74.github.io`
+- **Project Name**: `paddy74-portfolio`
 - **License**: Source Available
 - **Package Manager**: [pNPm](https://pnpm.io/)

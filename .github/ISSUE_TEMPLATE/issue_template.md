@@ -14,4 +14,4 @@ assignees: ""
 
 ## Specifications
 
-- paddy74.github.io version:
+- paddy74-portfolio version:
