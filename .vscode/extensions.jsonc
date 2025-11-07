@@ -1,8 +1,8 @@
 {
   "recommendations": [
     // Markdown
-    "yzhang.markdown-all-in-one",
-    "DavidAnson.vscode-markdownlint",
+    "yzhang.markdown-all-in-one", // editor utilities, formtter
+    "DavidAnson.vscode-markdownlint", // linter
     "bierner.markdown-checkbox",
     "bierner.markdown-footnotes",
     "bierner.markdown-mermaid",
