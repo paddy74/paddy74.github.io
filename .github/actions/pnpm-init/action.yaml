@@ -1,0 +1,27 @@
+name: pnpm-init
+description: "Initialize a job for Node.js with pnpm"
+
+inputs:
+  node-version:
+    description: "Version of Node.js"
+    required: true
+
+runs:
+  using: composite
+  steps:
+    - name: Install pnpm
+      uses: pnpm/action-setup@v4
+      working-directory: ./website
+      with:
+        version: 10
+
+    - name: Use Node.js ${{ node-version }}
+      uses: actions/setup-node@v4
+      working-directory: ./website
+      with:
+        node-version: ${{ node-version }}
+        cache: "pnpm"
+
+    - name: Install dependencies
+      working-directory: ./website
+      run: pnpm install
