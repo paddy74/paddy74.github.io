@@ -1,6 +1,6 @@
 # Personal Website Portfolio
 
-This is my personal website portfolio -- including my resume, project highlights, work samples, and technical reference documentation. It is built with [Docusaurus](https://https://docusaurus.io/).
+This is my personal website portfolio -- including my resume, project highlights, work samples, technical reference documentation, and the occasional blog post. It is built with [Docusaurus](https://https://docusaurus.io/).
 
 ## Developer Guide
 

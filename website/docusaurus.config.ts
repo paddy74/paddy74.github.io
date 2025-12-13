@@ -3,11 +3,11 @@ import type { Config } from "@docusaurus/types";
 import { themes as prismThemes } from "prism-react-renderer";
 
 const config: Config = {
-  title: "Portfolio Site",
-  tagline: "Personal portfolio and blogging site for Patrick Young",
+  title: "Digital Portfolio, Patrick Young",
+  tagline:
+    "Personal portfolio, documentation, and blogging site for Patrick Young",
   favicon: "img/favicon.ico",
 
-  // Future flags, see https://docusaurus.io/docs/api/docusaurus-config#future
   future: {
     v4: true, // Improve compatibility with the upcoming Docusaurus v4
   },
@@ -73,16 +73,16 @@ const config: Config = {
 
   themeConfig: {
     // Social card
-    image: "img/docusaurus-social-card.jpg",
+    image: "img/pyoung-social-card.jpg",
     colorMode: {
       respectPrefersColorScheme: true,
     },
 
     navbar: {
-      title: "Portfolio Site",
+      title: "Patrick Young",
       logo: {
         alt: "Site Logo",
-        src: "img/logo.svg",
+        src: "img/logo.png",
       },
       items: [
         // Documentation
