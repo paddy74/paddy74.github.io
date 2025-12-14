@@ -3,9 +3,11 @@ import type { Config } from "@docusaurus/types";
 import { themes as prismThemes } from "prism-react-renderer";
 
 const config: Config = {
-  title: "Digital Portfolio, Patrick Young",
-  tagline:
-    "Personal portfolio, documentation, and blogging site for Patrick Young",
+  title: "Digital Portfolio",
+  tagline: `
+    Welcome to my personal digital portfolio!
+    Here you will find my resume, technical reference documentation, and the occasional blog post.
+    `,
   favicon: "img/favicon.ico",
 
   future: {
@@ -42,8 +44,7 @@ const config: Config = {
       {
         docs: {
           sidebarPath: "./sidebars.ts",
-          editUrl:
-            "https://github.com/paddy74/paddy74.github.io/tree/main/website/",
+          editUrl: "https://github.com/paddy74/paddy74.github.io/tree/main/website/",
           //routeBasePath: "/",
           showLastUpdateAuthor: true,
           showLastUpdateTime: true,
@@ -56,13 +57,10 @@ const config: Config = {
             type: ["rss", "atom"],
             xslt: true,
           },
-          // Please change this to your repo.
-          // Remove this to remove the "edit this page" links.
-          editUrl:
-            "https://github.com/paddy74/paddy74.github.io/tree/main/website/",
+          editUrl: "https://github.com/paddy74/paddy74.github.io/tree/main/website/",
           onInlineTags: "warn",
           onInlineAuthors: "warn",
-          onUntruncatedBlogPosts: "warn",
+          onUntruncatedBlogPosts: "ignore", // "warn",
         },
         theme: {
           customCss: "./src/css/custom.css",
@@ -108,10 +106,10 @@ const config: Config = {
       style: "dark",
       links: [
         {
-          title: "Docs",
+          title: "Learn",
           items: [
             {
-              label: "Tutorial",
+              label: "Introduction",
               to: "/docs/intro",
             },
           ],
@@ -120,15 +118,15 @@ const config: Config = {
           title: "Links",
           items: [
             {
-              label: "LinkedIn",
+              label: "LinkedIn:// patyx",
               href: "https://www.linkedin.com/in/patyx/",
             },
             {
-              label: "GitHub",
+              label: "GitHub:// paddy74",
               href: "https://github.com/paddy74/",
             },
             {
-              label: "Stack Overflow",
+              label: "Stack Overflow:// patyx",
               href: "https://stackoverflow.com/users/7706917/patyx",
             },
           ],

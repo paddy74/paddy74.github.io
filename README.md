@@ -13,6 +13,8 @@ This is my personal website portfolio -- including my resume, project highlights
 cd website
 # Install pnpm with corepack and run pnpm install
 npm run init
+# shamefully-hoist to address issues with docusaurus-lunr-search
+pnpm install --shamefully-hoist
 
 # Start a local instance
 pnpm run start
