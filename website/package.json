@@ -23,14 +23,14 @@
     "@docusaurus/core": "^3.9.2",
     "@docusaurus/preset-classic": "^3.9.2",
     "@docusaurus/theme-mermaid": "^3.9.2",
-    "@mdx-js/react": "^3.0.0",
-    "clsx": "^2.0.0",
+    "@mdx-js/react": "^3.1.1",
+    "clsx": "^2.1.1",
     "docusaurus-lunr-search": "^3.6.0",
     "papaparse": "^5.5.3",
-    "prism-react-renderer": "^2.3.0",
+    "prism-react-renderer": "^2.4.1",
     "raw-loader": "^4.0.2",
-    "react": "^19.0.0",
-    "react-dom": "^19.0.0",
+    "react": "^19.2.3",
+    "react-dom": "^19.2.3",
     "remark": "^15.0.1",
     "remark-stringify": "^11.0.0"
   },
@@ -39,7 +39,7 @@
     "@docusaurus/tsconfig": "^3.9.2",
     "@docusaurus/types": "^3.9.2",
     "prettier": "3.7.4",
-    "typescript": "~5.6.2"
+    "typescript": "~5.9.3"
   },
   "browserslist": {
     "production": [
