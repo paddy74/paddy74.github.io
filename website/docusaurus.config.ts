@@ -135,6 +135,10 @@ const config: Config = {
           title: "More",
           items: [
             {
+              label: "Portfolio",
+              to: "/docs/intro",
+            },
+            {
               label: "Blog",
               to: "/blog",
             },
