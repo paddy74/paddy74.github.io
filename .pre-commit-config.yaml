@@ -5,6 +5,7 @@ repos:
     rev: v6.0.0
     hooks:
       - id: check-added-large-files
+        exclude: (^|/)(pnpm-lock\.yaml|package-lock\.json|yarn\.lock)$
       - id: check-merge-conflict
       - id: check-yaml
       - id: detect-private-key
