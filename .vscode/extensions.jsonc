@@ -1,5 +1,10 @@
 {
   "recommendations": [
+    // TypeScript
+    "esbenp.prettier-vscode",
+    "dbaeumer.vscode-eslint",
+    "stylelint.vscode-stylelint",
+
     // Markdown
     "yzhang.markdown-all-in-one", // editor utilities, formtter
     "DavidAnson.vscode-markdownlint", // linter
@@ -15,6 +20,6 @@
 
     // Other
     "hediet.vscode-drawio",
-    "nhoizey.gremlins"
-  ]
+    "nhoizey.gremlins",
+  ],
 }

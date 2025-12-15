@@ -25,5 +25,5 @@ runs:
 
     - name: Install dependencies
       working-directory: ./website
-      # shamefully-hoist to address issues with docusaurus-lunr-search
+      # shamefully-hoist to handle issues with docusaurus-lunr-search
       run: pnpm install --shamefully-hoist

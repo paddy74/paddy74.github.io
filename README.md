@@ -5,19 +5,32 @@ This is my personal website portfolio -- including my resume, project highlights
 ## Developer Guide
 
 - **Package Manager**: [`pnpm`](https://pnpm.io/)
-- **Linter**: [ESLint](https://eslint.org/)
-- **Code Formatter**: [Prettier](https://prettier.io/)
+- **Linter**:
+  - TypeScript: [ESLint](https://eslint.org/)
+  - CSS: [Stylelint](https://stylelint.io/)
+  - Markdown: [markdownlint](https://github.com/DavidAnson/vscode-markdownlint/)
+- **Code Formatter**:
+  - [Prettier](https://prettier.io/)
+  - Markdown: [Markdown All in One](yzhang.markdown-all-in-one)
 - **Pre-Commit Hooks**: [prek](https://prek.j178.dev/)
 
 ```bash
 cd website
 # Install pnpm with corepack and run pnpm install
 npm run init
-# shamefully-hoist to address issues with docusaurus-lunr-search
+# shamefully-hoist to handle issues with docusaurus-lunr-search
 pnpm install --shamefully-hoist
 
 # Start a local instance
 pnpm run start
+
+# Type check, lint, format
+pnpm run typecheck
+pnpm run lint
+pnpm run format
+
+# Install pre-commit hooks
+prek install
 ```
 
 ### Key Development Principles
