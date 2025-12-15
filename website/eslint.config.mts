@@ -40,7 +40,7 @@ export default defineConfig([
   },
 
   // TypeScript preset
-  ...tseslint.configs.recommended,
+  tseslint.configs.recommended,
 
   // React preset
   reactPlugin.configs.flat.recommended,
