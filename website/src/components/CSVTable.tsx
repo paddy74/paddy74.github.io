@@ -31,7 +31,15 @@ import { useEffect, useState } from "react";
  * @param {number[]} [excludeColumns=[]] - Array of zero-based column indices to exclude
  * @return {JSX.Element}
  */
-export default function CSVTable({ csvText, csvPath, excludeColumns = [] }) {
+export default function CSVTable({
+  csvText,
+  csvPath,
+  excludeColumns = [],
+}: {
+  csvText: string;
+  csvPath: string;
+  excludeColumns?: number[];
+}) {
   // tableData holds the parsed CSV rows as arrays of strings.
   // Example: [ ["Header1", "Header2"], ["Row1Col1", "Row1Col2"], ... ]
   const [tableData, setTableData] = useState([]);
