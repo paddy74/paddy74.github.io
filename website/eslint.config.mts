@@ -8,7 +8,9 @@ import js from "@eslint/js";
 import globals from "globals";
 import tseslint from "typescript-eslint";
 
-// CJS plugins
+// Plugins
+import * as mdxPlugin from "eslint-plugin-mdx";
+
 const reactPlugin = require("eslint-plugin-react");
 const docusaurusPlugin = require("@docusaurus/eslint-plugin");
 
@@ -45,6 +47,9 @@ export default defineConfig([
   // React preset
   reactPlugin.configs.flat.recommended,
   reactPlugin.configs.flat["jsx-runtime"],
+
+  // MDX/Markdown
+  mdxPlugin.configs.flat,
 
   // CommonJS override
   {
