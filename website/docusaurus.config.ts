@@ -66,7 +66,7 @@ const config: Config = {
           onInlineTags: "warn",
         },
         // blog: false, // disable the default blog
-        blog: {
+        blog: false /* {
           showReadingTime: true,
           feedOptions: {
             type: ["rss", "atom"],
@@ -76,7 +76,7 @@ const config: Config = {
           onInlineTags: "warn",
           onInlineAuthors: "warn",
           onUntruncatedBlogPosts: "ignore", // "warn",
-        },
+        }, */,
         theme: {
           customCss: "./src/css/custom.css",
         },
@@ -114,7 +114,7 @@ const config: Config = {
           label: "Documentation",
         },
         // Blog
-        { to: "/blog", label: "Blog", position: "left" },
+        //{ to: "/blog", label: "Blog", position: "left" },
 
         // Right navbar
         {

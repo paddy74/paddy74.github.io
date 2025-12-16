@@ -14,13 +14,13 @@ const PageButtonList: PageButtonItem[] = [
     target: "/portfolio/intro",
   },
   {
-    text: "Reference Documentation",
+    text: "Opinionated Handbook",
     target: "/docs/intro",
   },
-  {
+  /* {
     text: "Professional Blog",
     target: "/blog",
-  },
+  }, */
 ];
 
 function PageButton({ text, target }: PageButtonItem) {
