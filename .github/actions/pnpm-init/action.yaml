@@ -6,24 +6,28 @@ inputs:
     description: "Version of Node.js"
     required: true
     default: "24"
+  site-directory:
+    description: "Working directory for the package manager"
+    required: true
+    default: "./website"
 
 runs:
   using: composite
   steps:
     - name: Install pnpm
       uses: pnpm/action-setup@v4
-      working-directory: ./website
       with:
         version: 10
 
-    - name: Use Node.js ${{ node-version }}
+    - name: Use Node.js ${{ inputs.site-directory }}
       uses: actions/setup-node@v4
-      working-directory: ./website
       with:
-        node-version: ${{ node-version }}
+        node-version: ${{ inputs.node-version }}
         cache: "pnpm"
+        cache-dependency-path: ${{ inputs.site-directory }}/pnpm-lock.yaml
 
     - name: Install dependencies
-      working-directory: ./website
+      working-directory: ${{ inputs.site-directory }}
       # shamefully-hoist to handle issues with docusaurus-lunr-search
       run: pnpm install --shamefully-hoist
+      shell: bash

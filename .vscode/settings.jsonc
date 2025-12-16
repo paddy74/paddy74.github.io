@@ -3,7 +3,7 @@
   "[markdown]": {
     "editor.tabSize": 2,
     "editor.defaultFormatter": "yzhang.markdown-all-in-one",
-    "editor.codeActionsOnSave": { "source.fixAll.markdownlint": true }
+    "editor.codeActionsOnSave": { "source.fixAll.markdownlint": true },
   },
   "markdown.validate.enabled": true,
   "markdown.updateLinksOnFileMove.enabled": "always",
@@ -12,16 +12,16 @@
 
   "markdownlint.config": {
     "MD028": false,
-    "MD025": { "front_matter_title": "" }
+    "MD025": { "front_matter_title": "" },
   },
 
   // Markdown MDX
   "mdx.server.enable": true,
   "files.associations": {
-    "*.mdx": "mdx"
+    "*.mdx": "mdx",
   },
   "[mdx]": {
-    "editor.defaultFormatter": "unifiedjs.vscode-mdx"
+    "editor.defaultFormatter": "unifiedjs.vscode-mdx",
   },
 
   // code-spell-checker
@@ -30,7 +30,8 @@
     ".vscode",
     "package-lock.json",
     "node_modules",
-    "build"
+    "build",
+    "**/*.pdf",
   ],
-  "cSpell.words": ["youngweb"]
+  "cSpell.words": ["youngweb"],
 }

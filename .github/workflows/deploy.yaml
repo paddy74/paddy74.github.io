@@ -1,0 +1,105 @@
+name: Deploy site to GitHub Pages
+
+concurrency:
+  group: ${{ github.workflow }}-${{ github.ref }}
+  cancel-in-progress: true
+
+on:
+  push:
+    # on change to watched file(s)
+    branches: ["main"]
+    paths:
+      - website/**
+  release:
+    types:
+      - published
+  workflow_dispatch:
+    inputs:
+      ref:
+        description: "Branch, tag, or SHA to deploy"
+        required: false
+        default: ""
+
+permissions:
+  contents: read
+
+jobs:
+  deploy:
+    # on release, push to main, or manual dispatch
+    if: >-
+      github.repository == 'paddy74/paddy74.github.io' && (
+        (
+          github.event_name == 'release' &&
+          github.event.release.prerelease == false &&
+          github.event.release.draft == false
+        ) ||
+        (
+          github.event_name == 'push' &&
+          github.ref == 'refs/heads/main'
+        ) ||
+        github.event_name == 'workflow_dispatch'
+      )
+
+
+    name: Deploy website
+    runs-on: ubuntu-latest
+    permissions:
+      contents: read
+      pages: write
+      id-token: write
+    environment:
+      name: github-pages
+      url: ${{ steps.deploy-pages.outputs.page_url }}
+
+    steps:
+      - name: Check out release tag
+        if: github.event_name == 'release'
+        uses: actions/checkout@v5
+        with:
+          fetch-depth: 0
+          ref: ${{ github.event.release.tag_name }}
+
+      - name: Check out branch
+        if: github.event_name == 'push'
+        uses: actions/checkout@v5
+        with:
+          fetch-depth: 0
+
+      - name: Resolve dispatch ref
+        if: github.event_name == 'workflow_dispatch'
+        id: dispatch-ref
+        run: |
+          ref="$DISPATCH_REF"
+          if [ -z "$ref" ]; then
+            if [ -n "$GITHUB_REF" ]; then
+              ref="$GITHUB_REF"
+            else
+              ref="$GITHUB_SHA"
+            fi
+          fi
+          echo "ref=$ref" >> "$GITHUB_OUTPUT"
+        env:
+          DISPATCH_REF: ${{ github.event.inputs.ref }}
+      - name: Check out dispatch ref
+        if: github.event_name == 'workflow_dispatch'
+        uses: actions/checkout@v5
+        with:
+          fetch-depth: 0
+          ref: ${{ steps.dispatch-ref.outputs.ref }}
+
+      - name: Setup GitHub Pages
+        uses: actions/configure-pages@v4
+
+      - uses: ./.github/actions/pnpm-init
+      - name: Build website
+        working-directory: ./website
+        run: pnpm run build
+
+      - name: Upload site artifact
+        uses: actions/upload-pages-artifact@v3
+        with:
+          path: build
+
+      - name: Deploy to GitHub Pages
+        id: deploy-pages
+        uses: actions/deploy-pages@v4

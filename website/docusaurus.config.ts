@@ -18,10 +18,12 @@ const config: Config = {
 
   url: "https://work.youngweb.site", // production site url
   baseUrl: "/", // /<baseUrl> pathname under which the site is served
+  trailingSlash: false,
 
   // GitHub pages deployment config
   organizationName: "paddy74", // GitHub org/user name
   projectName: "paddy74.github.io", // repo name
+  deploymentBranch: "main",
 
   // html metadata
   i18n: {
