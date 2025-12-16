@@ -98,7 +98,7 @@ jobs:
       - name: Upload site artifact
         uses: actions/upload-pages-artifact@v3
         with:
-          path: build
+          path: website/build
 
       - name: Deploy to GitHub Pages
         id: deploy-pages
