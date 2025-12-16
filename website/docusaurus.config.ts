@@ -100,14 +100,14 @@ const config: Config = {
         {
           docsPluginId: "portfolio",
           type: "docSidebar",
-          sidebarId: "tutorialSidebar",
+          sidebarId: "defaultSidebar",
           position: "left",
           label: "Portfolio",
         },
         // Documentation
         {
           type: "docSidebar",
-          sidebarId: "tutorialSidebar",
+          sidebarId: "defaultSidebar",
           position: "left",
           label: "Documentation",
         },
