@@ -1,0 +1,75 @@
+{
+  "name": "paddy74-portfolio",
+  "version": "0.0.0",
+  "private": true,
+  "scripts": {
+    "preinstall": "npx only-allow pnpm",
+    "docusaurus": "docusaurus",
+    "start": "docusaurus start",
+    "build": "docusaurus build",
+    "swizzle": "docusaurus swizzle",
+    "deploy": "docusaurus deploy",
+    "clear": "docusaurus clear",
+    "serve": "docusaurus serve",
+    "write-translations": "docusaurus write-translations",
+    "write-heading-ids": "docusaurus write-heading-ids",
+    "typecheck": "tsc",
+    "lint": "pnpm exec eslint --flag unstable_native_nodejs_ts_config . && stylelint .",
+    "lintfix": "pnpm exec eslint --flag unstable_native_nodejs_ts_config . --fix && stylelint . --fix",
+    "format": "pnpm exec prettier . --write --config ../.prettierrc --ignore-path ../.prettierignore",
+    "npm-update": "npx npm-check-updates -u",
+    "init": "npm install --global corepack@latest && corepack enable pnpm && corepack prepare pnpm@latest-10 --activate && pnpm install",
+    "update-deps": "pnpm install && pnpm update --latest && pnpm audit --fix && pnpm install && pnpm dedupe",
+    "clean-install": "pnpm store prune && rm -rf node_modules pnpm-lock.yaml && pnpm install"
+  },
+  "dependencies": {
+    "@docusaurus/core": "^3.9.2",
+    "@docusaurus/preset-classic": "^3.9.2",
+    "@docusaurus/theme-mermaid": "^3.9.2",
+    "@mdx-js/react": "^3.1.1",
+    "clsx": "^2.1.1",
+    "docusaurus-lunr-search": "^3.6.0",
+    "papaparse": "^5.5.3",
+    "prism-react-renderer": "^2.4.1",
+    "raw-loader": "^4.0.2",
+    "react": "^19.2.3",
+    "react-dom": "^19.2.3",
+    "remark": "^15.0.1",
+    "remark-stringify": "^11.0.0"
+  },
+  "devDependencies": {
+    "@docusaurus/eslint-plugin": "^3.9.2",
+    "@docusaurus/module-type-aliases": "^3.9.2",
+    "@docusaurus/tsconfig": "^3.9.2",
+    "@docusaurus/types": "^3.9.2",
+    "@eslint/js": "^9.39.2",
+    "eslint": "^9.39.2",
+    "eslint-plugin-mdx": "^3.6.2",
+    "eslint-plugin-react": "^7.37.5",
+    "globals": "^16.5.0",
+    "prettier": "3.7.4",
+    "stylelint": "^16.26.1",
+    "stylelint-config-prettier": "^9.0.5",
+    "stylelint-config-standard": "^39.0.1",
+    "typescript": "~5.9.3",
+    "typescript-eslint": "^8.49.0"
+  },
+  "browserslist": {
+    "production": [
+      ">0.5%",
+      "not dead",
+      "not op_mini all"
+    ],
+    "development": [
+      "last 3 chrome version",
+      "last 3 firefox version",
+      "last 5 safari version"
+    ]
+  },
+  "engines": {
+    "node": ">=20.0"
+  },
+  "volta": {
+    "node": ">=20.0"
+  }
+}

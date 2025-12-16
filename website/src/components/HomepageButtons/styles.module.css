@@ -1,0 +1,21 @@
+.buttons {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  column-gap: 1rem;
+  width: 80%;
+  margin: 0 auto;
+}
+
+.buttons :global(.button) {
+  flex: 1;
+  text-align: center;
+}
+
+.buttonRow {
+  display: flex;
+  justify-content: center;
+  column-gap: 1rem;
+  flex-wrap: wrap;
+  width: 100%;
+}

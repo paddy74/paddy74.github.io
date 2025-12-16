@@ -1,0 +1,6 @@
+ignoredBuiltDependencies:
+  - core-js
+  - core-js-pure
+
+overrides:
+  webpack-dev-server@<=5.2.0: ">=5.2.1"

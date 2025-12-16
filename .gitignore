@@ -2,7 +2,27 @@
 # Language Specific
 ###############################################################################
 
-# ...
+# ###########################################################
+# https://github.com/facebook/docusaurus/blob/main/.gitignore
+# ###########################################################
+.DS_Store
+.idea
+*.iml
+*.code-workspace
+.changelog
+.history
+
+node_modules
+.yarn
+
+.eslintcache
+
+yarn-error.log
+website/build
+coverage
+.docusaurus
+.cache-loader
+types
 
 ###############################################################################
 # Integrated Development Enviornments and Text Editors
@@ -83,9 +103,11 @@ fabric.properties
 #########
 .vscode/*
 !.vscode/settings.json
+!.vscode/settings.jsonc
 !.vscode/tasks.json
 !.vscode/launch.json
 !.vscode/extensions.json
+!.vscode/extensions.jsonc
 
 ##############
 # Sublime Text

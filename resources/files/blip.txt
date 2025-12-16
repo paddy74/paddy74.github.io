@@ -1,3 +1,0 @@
-My name is Patrick Young. I am an exceptional self-driven software engineer with 6+ years of technical experience in the industry with a specialization in technical leadership and system design for internal data analytics platforms and data engineering teams. My track record demonstrates multiple data analytics modernization efforts in mixed-security environments for public and highly sensitive government deployments. I aspire to help organizations adjust to rapidly advancing technologies by leading teams to design and deliver data-driven products with resiliant development platforms and self-sustaining groups of subject matter experts.
-
-You can find me on LinkedIn at https://www.linkedin.com/in/patyx/ or contact me at patrick@youngweb.site.

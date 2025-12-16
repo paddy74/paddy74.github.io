@@ -1,0 +1,22 @@
+name: Verify can-build
+
+on:
+  pull_request:
+    branches: [main] # PR verification only (base=main)
+
+# Build job for PR verification
+jobs:
+  build:
+    if: github.event_name == 'pull_request'
+    name: Build Docusaurus
+    runs-on: ubuntu-latest
+
+    steps:
+      - uses: actions/checkout@v5
+        with:
+          fetch-depth: 0
+      - uses: ./.github/actions/pnpm-init
+
+      - name: Build website
+        working-directory: ./website
+        run: pnpm run build
