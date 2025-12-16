@@ -5,6 +5,6 @@ sidebar_position: 1
 
 # Welcome
 
-This is my personal website portfolio -- including my resume, project highlights, work samples, technical reference documentation, and the occasional blog post. It is built with [Docusaurus](https://https://docusaurus.io/).
+Welcome to my personal digital portfolio! Here you will find my resume, project highlights, work samples, technical reference documentation, and the occasional blog post.
 
-This site is currently under development, so please find my latest information on LinkedIn at [https://www.linkedin.com/in/patyx/](https://www.linkedin.com/in/patyx/).
+This site is currently under construction, so please find my latest information on [LinkedIn:// patyx](https://www.linkedin.com/in/patyx/).

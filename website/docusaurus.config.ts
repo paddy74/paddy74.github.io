@@ -7,6 +7,8 @@ const config: Config = {
   tagline: `
     Welcome to my personal digital portfolio!
     Here you will find my resume, technical reference documentation, and the occasional blog post.
+
+    This site is currently under construction, so please find my latest information on LinkedIn at linkedin.com/in/patyx/.
     `,
   favicon: "img/favicon.ico",
 
@@ -126,7 +128,7 @@ const config: Config = {
     footer: {
       style: "dark",
       links: [
-        {
+        /* {
           title: "Learn",
           items: [
             {
@@ -134,7 +136,7 @@ const config: Config = {
               to: "/docs/intro",
             },
           ],
-        },
+        }, */
         {
           title: "Links",
           items: [
@@ -155,18 +157,9 @@ const config: Config = {
         {
           title: "More",
           items: [
-            {
-              label: "Portfolio",
-              to: "/portfolio/intro",
-            },
-            {
-              label: "Documentation",
-              to: "/docs/intro",
-            },
-            {
-              label: "Blog",
-              to: "/blog",
-            },
+            /* { label: "Portfolio", to: "/portfolio/intro" },
+            { label: "Documentation", to: "/docs/intro" },
+            { label: "Blog", to: "/blog" }, */
             {
               label: "Built with Docusaurus",
               href: "https://docusaurus.io/",
