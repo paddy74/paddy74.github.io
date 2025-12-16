@@ -27,7 +27,18 @@ const config: Config = {
     locales: ["en"],
   },
 
-  plugins: [require.resolve("docusaurus-lunr-search")],
+  plugins: [
+    require.resolve("docusaurus-lunr-search"),
+    [
+      "@docusaurus/plugin-content-docs",
+      {
+        id: "portfolio",
+        path: "portfolio",
+        routeBasePath: "portfolio",
+        sidebarPath: "./sidebars.ts",
+      },
+    ],
+  ],
 
   onBrokenLinks: "throw",
   markdown: {
@@ -40,12 +51,14 @@ const config: Config = {
 
   presets: [
     [
-      "classic",
+      "@docusaurus/preset-classic",
       {
         docs: {
+          // id ommitted, default instance
           sidebarPath: "./sidebars.ts",
           editUrl: "https://github.com/paddy74/paddy74.github.io/tree/main/website/",
-          //routeBasePath: "/",
+          path: "docs",
+          routeBasePath: "docs",
           showLastUpdateAuthor: true,
           showLastUpdateTime: true,
           onInlineTags: "warn",
@@ -83,6 +96,14 @@ const config: Config = {
         src: "img/logo.png",
       },
       items: [
+        // Portfolio
+        {
+          docsPluginId: "portfolio",
+          type: "docSidebar",
+          sidebarId: "tutorialSidebar",
+          position: "left",
+          label: "Portfolio",
+        },
         // Documentation
         {
           type: "docSidebar",
@@ -136,6 +157,10 @@ const config: Config = {
           items: [
             {
               label: "Portfolio",
+              to: "/portfolio/intro",
+            },
+            {
+              label: "Documentation",
               to: "/docs/intro",
             },
             {
